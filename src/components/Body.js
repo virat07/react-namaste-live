@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { restrautList } from "./config";
 import { RestrauntCard } from "./RestrauntCard";
-
 // hooks is a normal functions
 
 export default Body = () => {
@@ -30,7 +29,6 @@ export default Body = () => {
         <button className="search-btn"
         onClick={()=>{
           const data = filterData(searchText,restaurants);
-
           setRestaurants(data);
         }}
         >Search</button>
