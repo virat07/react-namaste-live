@@ -19,7 +19,7 @@
 }
 
 .card{
-    width: 200px;
+    width: 300px;
     border: 1px solid black;
     padding: 10px;
     margin: 10px;
@@ -32,4 +32,11 @@
 .restaurant-list {
     display: flex;
     flex-wrap: wrap;
+}
+.search-container {
+    margin: auto;
+    width: 50%;
+}
+.search-input  {
+    width: 90%;
 }
