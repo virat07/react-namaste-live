@@ -1,7 +1,11 @@
 export const ShimmerComponent = () => {
   return (
-    <>
-      <h1>Shimmer UI loadding..</h1>
-    </>
+    <div className="restaurant-list">
+      {Array(20)
+        .fill("")
+        .map((e, index) => {
+          return <div className="shimmerCard" key={index}></div>;
+        })}
+    </div>
   );
 };

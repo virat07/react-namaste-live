@@ -1,42 +1,82 @@
 .header {
-    display: flex;
-    justify-content: space-between ;
-    margin: 10px;
-    border: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+  border: 1px solid black;
 }
 
-.nav-items > ul{
-    list-style-type: none;
-    display: flex;
+.nav-items > ul {
+  list-style-type: none;
+  display: flex;
 }
 
 .nav-items > ul > li {
-    padding: 10px;
+  padding: 10px;
 }
 
 .logo {
-    width: 100px;
+  width: 100px;
 }
 
-.card{
-    width: 300px;
-    border: 1px solid black;
-    padding: 10px;
-    margin: 10px;
+.card {
+  width: 300px;
+  border: 1px solid black;
+  padding: 10px;
+  margin: 10px;
 }
 
 .card > img {
-    width: 100%;
+  width: 100%;
 }
 
 .restaurant-list {
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
 .search-container {
-    margin: auto;
-    width: 50%;
+  margin: auto;
+  width: 50%;
 }
-.search-input  {
-    width: 90%;
+.search-input {
+  width: 90%;
 }
+.shimmerCard {
+  width: 300px;
+  border: 1px solid black;
+  padding: 10px;
+  margin: 10px;
+  background-color: lightgrey;
+  height: 200px;
+}
+.shimmerCard > img {
+  width: 100%;
+}
+.menu {
+  display: flex;
+}
+.center {
+  top: 50%;
+  border: 3px solid #f1f1f1;
+  text-align: center;
+  padding:16px;
+  /* padding: 8% 0 0; */
+  margin: auto;
+  text-align: center;
+  max-width: 360px;
+  margin: 0 auto 100px;
+  padding: 45px;
+  
+}
+.button-submit {
+  background-color: #04aa6d;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+button:hover {
+  opacity: 0.8;
+}
+
