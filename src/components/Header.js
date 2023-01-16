@@ -1,26 +1,27 @@
+import Logo from "../assets/img/foodvilla.png";
+import { Link } from "react-router-dom";
 const Title = () => (
-    <a href="/">
-      <img
-        className="logo"
-        alt="logo"
-        src="https://yt3.ggpht.com/ytc/AMLnZu_EC-ECXAxRAixWGEfMsE1rdSoetBHyxmLNdtCB=s900-c-k-c0x00ffffff-no-rj"
-      />
-    </a>
-  );
- 
-  const Header = () => {
-    return (
-      <div className="header">
-        <Title />
-        <div className="nav-items">
-          <ul>
-            <li>Home</li>
-            <li>About</li>
-            <li>Contact</li>
-            <li>Cart</li>
-          </ul>
-        </div>
+  <a tp="/">
+    <img className="logo" alt="logo" src={Logo} />
+  </a>
+);
+
+const Header = ({ setLogin }) => {
+  return (
+    <div className="header">
+      <Title />
+      <div className="nav-items">
+        <ul>
+          <Link to="/">Home</Link>
+          <Link to="/about">About</Link>
+          <Link to="/contact">Contact</Link>
+          <Link>Cart</Link>
+
+          <button onClick={() => setLogin()}>Logout</button>
+        </ul>
       </div>
-    );
-  };
-  export default Header; 
+    </div>
+  );
+};
+export default Header;
+//Link tag:-
