@@ -1,33 +1,19 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { RestrauntCard } from "./RestrauntCard";
 import { ShimmerComponent } from "./ShimmerUI";
 // hooks is a normal functions
-
+import { filterData } from "../utils/helper";
+import useGetRestaurants from "../utils/useGetRestaurants";
+import useOnline from "../utils/useOnline";
 export default Body = () => {
   const [searchText, setSearchText] = useState("");
-  const [filterRestaurants, setFilterRestaurants] = useState([]);
-  const [allRestaurants, setAllRestaurants] = useState([]);
-  const filterData = (searchText, restaurants) => {
-    return restaurants.filter((restaurant) =>
-      restaurant?.data?.name?.toLowerCase().includes(searchText.toLowerCase())
-    );
-  };
-  useEffect(() => {
-    getRestaurants();
-  }, []);
-  //if no depenedency is added then it will be called on every render.
-
-  //cdn is used for storing img
-
-  async function getRestaurants() {
-    const data = await fetch(
-      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=18.6658525&lng=73.7654367&page_type=DESKTOP_WEB_LISTING"
-    );
-    const json = await data.json();
-    setAllRestaurants(json?.data?.cards[2]?.data?.data?.cards);
-    setFilterRestaurants(json?.data?.cards[2]?.data?.data?.cards);
+  const { filterRestaurants, allRestaurants } = useGetRestaurants();
+  const isOnline = useOnline();
+  if (!isOnline) {
+    return <h1>Offline, please check you internet connection!!</h1>;
   }
+
   // conditional rendering:-
   return !allRestaurants ? (
     <ShimmerComponent />

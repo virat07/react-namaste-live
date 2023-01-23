@@ -15,6 +15,7 @@ const Header = ({ setLogin }) => {
           <Link to="/">Home</Link>
           <Link to="/about">About</Link>
           <Link to="/contact">Contact</Link>
+          <Link to="/instamart">InstaMart</Link>
           <Link>Cart</Link>
 
           <button onClick={() => setLogin()}>Logout</button>
